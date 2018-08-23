@@ -11,7 +11,7 @@ ul,ol {
   list-style: none;
 }
 /* 移动端图片边框   相当于  border:0 */
-img {vertical-align: top;} 
+img {display: block;} 
 /* -webkit-tap-highlight-color:rgba(0,0,0,0);//透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)  */
 a,
 input,
