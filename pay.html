@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/rem.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: PingFangSC-Regular, "Microsoft YaHei"; 
+        }
+        /* 订单详情 */
+        .order-detail, .pay-method, .pay-help {
+            width: 100%;
+            padding: .32rem 0 .48rem 0;   
+            border-bottom: .2rem solid #EEEEEE;
+        }
+
+        .order-detail dt, .pay-method dt, .pay-help dt {
+            border-left: .12rem solid #FF4E50;
+            padding-left: .41rem;
+            font-size: .3rem;
+            color: #333333;
+            line-height: .56rem;
+        }
+
+        .order-detail dd {
+            margin-top: .22rem;
+            margin-left: .4rem;
+            margin-right: .41rem;
+            padding-top: .28rem;
+            padding-bottom: .27rem;
+            border: .02rem solid #EEEEEE;
+        }
+
+        .order-detail dd > p {
+            padding-left: .24rem;
+            line-height: .36rem;
+            font-size: .26rem;
+            color: #999999;
+        }
+
+        .order-detail dd > p:nth-of-type(2) {
+            margin-top: .38rem;
+            color: #333333;
+        }
+        /* 点击选则支付方式 */
+        .pay-method dd {
+            margin-top: .54rem;
+            padding-left: .78rem;
+            padding-bottom: .47rem;
+        }
+        .pay-method dd > div {
+            float: left;
+            margin-right: 1.25rem;
+            width: 1.22rem;
+        }
+        .pay-method dd > div:nth-of-type(2), 
+        .pay-method dd > div:nth-of-type(3) {
+            width: 1rem;
+            margin-right: 1.33rem;
+        }
+        .pay-method dd > div:nth-of-type(3) {
+            margin-right: .92rem;
+        }
+        .pay-method dd > div > p {
+            width: 100%;
+            text-align: center;
+            font-size: .26rem;
+            font-family: PingFangSC-Regular, "Microsoft YaHei";
+            color: #333333;
+            line-height: .36rem;
+            margin-top: .1rem;
+        }
+        .pay-method dd > div > p:nth-of-type(2) {
+            color: #999999;
+            font-size: .18rem;
+            line-height: .28rem;
+        }
+
+        .pay-method dd > div > img {
+            width: 100%;
+            height: 1rem;
+        }
+        .pay-tip {
+            padding-left: .2rem;
+            padding-right: .28rem;
+            background-color: #EEEEEE;
+            padding-bottom: .3rem;
+        }
+        .pay-tip dt {
+            color: #FF2E50;
+            line-height: .7rem;
+            font-size: .32rem;
+            font-family: PingFang SC, "Microsoft YaHei";
+        }
+        .pay-tip dd > p {
+            font-size: .28rem;
+            color: #999999;
+            font-family: PingFangSC-Regular, "Microsoft YaHei";
+            line-height: .38rem;
+            margin-top: .3rem;
+        }
+        .pay-tip dd > p:nth-of-type(1) {
+            margin-top: .12rem;
+        }
+
+        .pay-help dd {
+            padding-top: .26rem;
+            padding-left: .4rem;
+        }
+        .pay-help dd > p {
+            color: #999999;
+            font-size: .28rem;
+            font-family: PingFangSC-Regular, "Microsoft YaHei";
+            height: .28rem;
+            margin-top: .2rem;
+        } 
+        .pay-help dd > p:nth-of-type(1) {
+            margin-top: 0;
+        }
+
+        .create-account {
+            font-family: PingFang SC, "Microsoft YaHei";
+            padding: 0 .36rem;
+        }
+        .create-account > p{
+            line-height: .68rem;
+            font-size: .28rem;
+            color: #333333;
+        }
+        .create-account > p > span {
+            color: #FF2E50;
+        }
+        .create-account > p:nth-of-type(1) {
+            text-align: right;
+        }
+        .create-account > p:nth-of-type(2) {
+            color: #CCCCCC;
+            text-align: center;
+            font-synthesis: .64rem;
+            font-size: .24rem;
+        }
+        .create-account > button {
+            display: block;
+            color: #FFFFFF;
+            font-family: PingFangSC-Regular, "Microsoft YaHei";
+            font-size: .32rem;
+            text-align: center;
+            line-height: .9rem;
+            width: 100%;
+            border: none;
+            border-radius: .05rem;
+            background-color: #FF4E50;
+        }
+    </style>
+</head>
+<body>
+    <!-- 订单详情 -->
+    <div class="order-detail">
+        <dl>
+            <dt>订单详情</dt>
+            <dd>
+                <p>付费金额：60元</p>
+                <p>服务内容：600钻石</p>
+            </dd>
+        </dl>
+    </div>
+    <!-- 支付方式 -->
+    <div class="pay-method">
+        <dl>
+            <dt>点击选择支付方式：</dt>
+            <dd class="clearfix">
+                <div>
+                    <img src="./img/yinlian_tubiao.png" alt="银联">
+                    <p>银联</p>
+                    <p>安全快捷</p>
+                </div>
+                <div>
+                    <img src="./img/weixin_tubiao.png" alt="微信">
+                    <p>支付宝</p>
+                    <p>安全快捷</p>
+                </div>
+                <div>
+                    <img src="./img/zhifubao_tubiao.png" alt="支付宝">
+                    <p>微信</p>
+                    <p>安全快捷</p>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <!-- 银联支付区 -->
+    <div class="yinlian">
+
+    </div>
+    <!-- 支付提示 -->
+    <div class="pay-tip">
+        <dl>
+            <dt>支付提醒</dt>
+            <dd>
+                <p>1. 无需开通网银即可使用快捷支付;</p>
+                <p>2. 首次使用须提供持卡人卡号、手机号、身份证号、开户姓名，等安全验证信息;</p>
+                <p>3. 如快捷支付遇到问题，将转入语音支付;您将收到银行95192或952132的来电，请按照语音提示操作输入密码;</p>
+                <p>4. 为了防止您的银行卡密码被他人窃取，连续输错两次密码后，该银行卡当日将不能再进行任何的快捷支付，次日可继续使用，但不影响正常存取款业务，为避免不必要的麻烦，请仔细核对密码后再输入;</p>
+                <p>5. 购买成功后1-5分钟即可查询购买结果。</p>
+            </dd>
+        </dl>
+    </div>
+    <!-- 支付帮助 -->
+    <div class="pay-help">
+        <dl>
+            <dt>支付帮助</dt>
+            <dd>
+                <p>1. 遇到问题可联系客服MM。</p>
+                <p>2. 客服电话：400-882-6190</p>
+                <p>3. 工作时间：周一到周五 08:30-21:00</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周六到周日 08:30-17:00</p>
+            </dd>
+        </dl>
+    </div>
+    <!-- 立即开通 -->
+    <div class="create-account">
+        <p>合计：<span>60元</span></p>
+        <button>立即开通</button>
+        <p>点击立即支付即表示已阅读并同意《支付协议》</p>
+    </div>
+</body>
+</html>
